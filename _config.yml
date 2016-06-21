@@ -1,2 +1,26 @@
-encoding: UTF-8
-baseurl: /
+markdown: kramdown
+highlighter: pygments
+permalink: /posts/:title.html
+excerpt_separator: "<!-- more -->"
+
+github: tianmu
+author: "天幕"
+email: shituo123@gmail.com
+name: "天幕个人博客"
+url: http://www.tianmu.com
+domain: www.tianmu.com
+all_categories: [
+["android", "Android开发","/posts/android.html"]
+["about", "关于","/about.html"]
+]
+
+paginate: 8
+paginate_path: "posts/page:num"
+timezone: America/Los_Angeles
+
+collections:
+  docs:
+    output: true
+
+gems:
+ - jekyll-paginate
