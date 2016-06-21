@@ -2,57 +2,13 @@
 layout: default
 title: 石拓的个人博客
 ---
-<!DOCTYPE html>
-<html>
+{% for post in site.posts %}
 
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Tianmu.GitHub.io : 石拓的个人博客">
+<h3><a id="welcome-to-github-pages" class="anchor" href="{{ post.url }}" aria-hidden="true">
+	<span aria-hidden="true" class="octicon octicon-link">{{ post.title }}</span></a>
+</h3>
+<p>{{ post.date | date_to_string }}</p>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Tianmu.GitHub.io</title>
-  </head>
-
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/tianmu">View on GitHub</a>
-
-          <h1 id="project_title">Tianmu.GitHub.io</h1>
-          <h2 id="project_tagline">石拓的个人博客</h2>
-
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
+{% endfor %}
 	  
-	  {% for post in site.posts %}
-
-		<h3><a id="welcome-to-github-pages" class="anchor" href="{{ post.url }}" aria-hidden="true">
-			<span aria-hidden="true" class="octicon octicon-link">{{ post.title }}</span></a>
-		</h3>
-		<p>{{ post.date | date_to_string }}</p>
-
-　　　{% endfor %}
-	  
-        
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
-  </body>
-</html>
+      
