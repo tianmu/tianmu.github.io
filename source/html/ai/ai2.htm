@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+  <meta name="theme-color" content="#222">
+  <meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+  <link rel="stylesheet" href="/css/main.css">
+
+
+  <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+  <script src="https://hm.baidu.com/hm.js?6d55ca4fdf950a25d52201ab6abfe8aa"></script>
+  <script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = { "hostname": "example.com", "root": "/", "scheme": "Mist", "version": "7.8.0", "exturl": false, "sidebar": { "position": "left", "display": "post", "padding": 18, "offset": 12, "onmobile": false }, "copycode": { "enable": false, "show_result": false, "style": null }, "back2top": { "enable": true, "sidebar": false, "scrollpercent": false }, "bookmark": { "enable": false, "color": "#222", "save": "auto" }, "fancybox": false, "mediumzoom": false, "lazyload": false, "pangu": false, "comments": { "style": "tabs", "active": null, "storage": true, "lazyload": false, "nav": null }, "algolia": { "hits": { "per_page": 10 }, "labels": { "input_placeholder": "Search for Posts", "hits_empty": "We didn't find any results for the search: ${query}", "hits_stats": "${hits} results found in ${time} ms" } }, "localsearch": { "enable": false, "trigger": "auto", "top_n_per_article": 1, "unescape": false, "preload": false }, "motion": { "enable": true, "async": false, "transition": { "post_block": "fadeIn", "post_header": "slideDownIn", "post_body": "slideDownIn", "coll_header": "slideLeftIn", "sidebar": "slideUpIn" } } };
+  </script>
+
+  <meta name="description" content="强学力行、顺势而为">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="天幕的个人博客">
+  <meta property="og:url" content="http://example.com/index.html">
+  <meta property="og:site_name" content="天幕的个人博客">
+  <meta property="og:description" content="强学力行、顺势而为">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="article:author" content="天幕">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="canonical" href="http://example.com/">
+
+
+  <script id="page-configurations">
+    // https://hexo.io/docs/variables.html
+    CONFIG.page = {
+      sidebar: "",
+      isHome: true,
+      isPost: false,
+      lang: 'zh-CN'
+    };
+  </script>
+
+  <title>天幕的个人博客</title>
+
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function () {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?6d55ca4fdf950a25d52201ab6abfe8aa";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <noscript>
+    <style>
+      .use-motion .brand,
+      .use-motion .menu-item,
+      .sidebar-inner,
+      .use-motion .post-block,
+      .use-motion .pagination,
+      .use-motion .comments,
+      .use-motion .post-header,
+      .use-motion .post-body,
+      .use-motion .collection-header {
+        opacity: initial;
+      }
+
+      .use-motion .site-title,
+      .use-motion .site-subtitle {
+        opacity: initial;
+        top: initial;
+      }
+
+      .use-motion .logo-line-before i {
+        left: initial;
+      }
+
+      .use-motion .logo-line-after i {
+        right: initial;
+      }
+    </style>
+  </noscript>
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner">
+        <div class="site-brand-container">
+          <div class="site-nav-toggle">
+            <div class="toggle" aria-label="切换导航栏">
+              <span class="toggle-line toggle-line-first"></span>
+              <span class="toggle-line toggle-line-middle"></span>
+              <span class="toggle-line toggle-line-last"></span>
+            </div>
+          </div>
+
+          <div class="site-meta">
+
+            <a href="/" class="brand" rel="start" style="opacity: 1;">
+              <span class="logo-line-before"><i class="" style="transform: translateX(100%);"></i></span>
+              <h1 class="site-title" style="opacity: 1; top: 0px;">天幕的个人博客</h1>
+              <span class="logo-line-after"><i class="" style="transform: translateX(-100%);"></i></span>
+            </a>
+          </div>
+
+          <div class="site-nav-right">
+            <div class="toggle popup-trigger">
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <nav class="site-nav">
+          <ul id="menu" class="main-menu menu">
+            <li class="menu-item menu-item-home menu-item-active" style="opacity: 1; transform: translateY(0px);">
+
+              <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+            </li>
+            <li class="menu-item menu-item-tags" style="opacity: 1; transform: translateY(0px);">
+
+              <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+            </li>
+            <li class="menu-item menu-item-categories" style="opacity: 1; transform: translateY(0px);">
+
+              <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+            </li>
+            <li class="menu-item menu-item-archives" style="opacity: 1; transform: translateY(0px);">
+
+              <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+            </li>
+            <li class="menu-item menu-item-ai" style="opacity: 1; transform: translateY(0px);">
+
+              <a href="/html/ai/ai.htm" rel="section"><i class="fas fa-user fa-fw"></i>AI</a>
+
+            </li>
+          </ul>
+        </nav>
+
+
+
+
+      </div>
+    </header>
+
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+      <span>0%</span>
+    </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+
+
+          <div class="content index posts-expand" style="position: absolute;
+          top: 5px;
+          width: 100%;
+          left: 10px;">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+            <style>
+            /* 定义左侧选项卡的样式 */
+            .tab {
+              float: left;
+              border: 1px solid #ccc;
+              background-color: #f1f1f1;
+              width: 20%;
+              height: 100%;
+            }
+            
+            /* 定义选项卡链接的样式 */
+            .tab a {
+              display: block;
+              color: black;
+              padding: 22px 16px;
+              text-decoration: none;
+            }
+            
+            /* 定义选项卡链接的悬停效果 */
+            .tab a:hover {
+              background-color: #ddd;
+            }
+            
+            /* 定义选项卡链接的激活效果 */
+            .tab a.active {
+              background-color: #ccc;
+            }
+            
+            /* 定义右侧页面的样式 */
+            .page {
+              float: left;
+              border: 1px solid #ccc;
+              width: 79%;
+              height: 600px;
+            }
+            
+            /* 定义iframe的样式 */
+            .page iframe {
+              width: 100%;
+              height: 100%;
+            }
+
+            .subtab {
+              float: left;
+              border: 1px solid #ccc;
+              background-color: #f1f1f1;
+              width: 100%;
+              height: 100%;
+            }
+
+            .subtab a {
+              display: block;
+              color: black;
+              padding: 22px 16px;
+              text-decoration: none;
+            }
+
+            .subtab a:hover {
+              background-color: #ddd;
+            }
+
+            .subtab a.active {
+              background-color: #ccc;
+            }
+            </style>
+            
+            <div>
+              <div class="tab" id="tab-container">
+              <!-- 这里将动态生成选项卡 -->
+              </div> 
+               
+              <div class="page" id="page-container">
+                <iframe id="iframe" src="https://www.runoob.com/html/html-links.html"></iframe>
+              </div>
+              
+            </div>
+            <script>
+             // 创建一个列表，用来存储tab的名称和对应的url
+              var tabList = [
+                {name: "A test", url: "https://www.runoob.com/html/html-links.html"},
+                {name: "文本转图片", subtabs: [
+                  {name: "dall2", url: "https://openai.com/product/dall-e-2"},
+                  {name: "A2 test", url: "https://www.baidu.com"}
+                ]},
+                {name: "C test", url: "https://www.google.com"}
+              ];
+
+              // 获取选项卡和页面容器元素
+              var tabContainer = document.getElementById("tab-container");
+              var iframe = document.getElementById("iframe");
+
+              // 定义一个函数，根据选项卡的id切换到对应的页面
+              function switchPage(tabId) {
+                // 遍历所有的选项卡元素
+                for (var i = 0; i < tabList.length; i++) {
+                  // 获取当前的选项卡元素和url
+                  var tab = document.getElementById("tab-" + i);
+                  var url = tabList[i].url;
+                  if (tabId == "tab-" + i) {
+                    // 如果是当前选项卡，设置为激活状态，并改变iframe的src属性为对应的url
+                    tab.className = "active";
+                    iframe.src = url;
+                  } else {
+                    // 如果不是当前选项卡，取消激活状态
+                    tab.className = "";
+                  }
+                }
+              }
+
+              function switchPage(tabId, name) {
+                // 遍历所有的选项卡元素
+                for (var i = 0; i < tabList.length; i++) {
+                  var subtabs = tabList[i].subtabs;
+                  if(subtabs != null) {
+                    for (var j = 0; j < subtabs.length; j++) {
+                      if(name.indexOf(subtabs[j].name) > 0) {
+                        var url = subtabs[j].url;
+                        // 如果是当前选项卡，设置为激活状态，并改变iframe的src属性为对应的url
+                        tab.className = "active";
+                        iframe.src = url;
+                      }
+                    }
+                    
+                  }
+                 
+                  if (tabId == "tab-" + i) {
+                    // 如果是当前选项卡，设置为激活状态，并改变iframe的src属性为对应的url
+                    tab.className = "active";
+                    iframe.src = url;
+                  } else {
+                    // 如果不是当前选项卡，取消激活状态
+                    tab.className = "";
+                  }
+                }
+              }
+
+              // 使用一个循环来创建tab元素，并添加到页面中
+              for (var i = 0; i < tabList.length; i++) {
+                // 获取当前的tab名称和url
+                var name = tabList[i].name;
+                var url = tabList[i].url;
+
+                // 创建一个a元素作为选项卡链接
+                var tab = document.createElement("a");
+                // 设置选项卡链接的id，文本，href属性
+                tab.id = "tab-" + i;
+                tab.textContent = name;
+                tab.href = "#";
+                
+                // 如果是第一个选项卡，设置为激活状态，并设置iframe的src属性为对应的url，否则不设置
+                if (i == 0) {
+                  tab.className = "active";
+                  iframe.src = url;
+                }
+
+                // 给选项卡添加点击事件监听器，调用切换页面的函数
+                tab.addEventListener("click", function(event) {
+                  // 阻止默认跳转行为
+                  event.preventDefault();
+                  // 获取点击的选项卡的id
+                  var tabId = event.target.id;
+                  // 调用切换页面的函数
+                  switchPage(tabId);
+                });
+
+                // 将选项卡添加到选项卡容器中
+                tabContainer.appendChild(tab);
+
+                var subtabs = tabList[i].subtabs;
+                if(subtabs != null) {
+                  var subtab = document.createElement("div");
+                  subtab.className = 'subtab'
+                  // 将选项卡添加到选项卡容器中
+                  tabContainer.appendChild(subtab);
+                  for (var j = 0; j < subtabs.length; j++) {
+                    var name = subtabs[j].name;
+                    var url = subtabs[j].url;
+
+                    // 创建一个a元素作为选项卡链接
+                    var tab = document.createElement("a");
+                    // 设置选项卡链接的id，文本，href属性
+                    tab.id = "subtab-" + j;
+                    tab.textContent = name;
+                    tab.href = "#" + name;
+                    // 给选项卡添加点击事件监听器，调用切换页面的函数
+                    tab.addEventListener("click", function(event) {
+                      // 阻止默认跳转行为
+                      event.preventDefault();
+                      // 获取点击的选项卡的id
+                      var tabId = event.target.id;
+                      // 调用切换页面的函数
+                      switchPage(tabId, event.target.href);
+                    });
+                    subtab.appendChild(tab);
+                  }
+                }
+              }
+              </script>
+          </div>
+          <script>
+            window.addEventListener('tabs:register', () => {
+              let { activeClass } = CONFIG.comments;
+              if (CONFIG.comments.storage) {
+                activeClass = localStorage.getItem('comments_active') || activeClass;
+              }
+              if (activeClass) {
+                let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+                if (activeTab) {
+                  activeTab.click();
+                }
+              }
+            });
+            if (CONFIG.comments.storage) {
+              window.addEventListener('tabs:click', event => {
+                if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+                let commentClass = event.target.classList[1];
+                localStorage.setItem('comments_active', commentClass);
+              });
+            }
+          </script>
+
+        </div>
+
+
+        <div class="toggle sidebar-toggle">
+          <span class="toggle-line toggle-line-first"></span>
+          <span class="toggle-line toggle-line-middle"></span>
+          <span class="toggle-line toggle-line-last"></span>
+        </div>
+
+        <aside class="sidebar">
+          <div class="sidebar-inner">
+
+            <ul class="sidebar-nav" style="display: none;">
+              <li class="sidebar-nav-toc">
+                文章目录
+              </li>
+              <li class="sidebar-nav-overview sidebar-nav-active">
+                站点概览
+              </li>
+            </ul>
+
+            <!--noindex-->
+            <div class="post-toc-wrap sidebar-panel" style="opacity: 0; max-height: 880px;">
+            </div>
+            <!--/noindex-->
+
+            <div class="site-overview-wrap sidebar-panel sidebar-panel-active" style="max-height: 880px; opacity: 1;">
+              <div class="site-author motion-element" itemprop="author" itemscope=""
+                itemtype="http://schema.org/Person">
+                <p class="site-author-name" itemprop="name">天幕</p>
+                <div class="site-description" itemprop="description">强学力行、顺势而为</div>
+              </div>
+              <div class="site-state-wrap motion-element">
+                <nav class="site-state">
+                  <div class="site-state-item site-state-posts">
+                    <a href="/archives/">
+
+                      <span class="site-state-item-count">1</span>
+                      <span class="site-state-item-name">日志</span>
+                    </a>
+                  </div>
+                </nav>
+              </div>
+
+
+
+            </div>
+
+          </div>
+        </aside>
+        <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+
+
+
+
+        <div class="copyright">
+
+          ©
+          <span itemprop="copyrightYear">2023</span>
+          <span class="with-love">
+            <i class="fa fa-heart"></i>
+          </span>
+          <span class="author" itemprop="copyrightHolder">天幕</span>
+        </div>
+        <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a>
+          &amp; <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a>
+          强力驱动
+        </div>
+
+
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+  <script src="/js/utils.js"></script>
+
+  <script src="/js/motion.js"></script>
+
+
+  <script src="/js/schemes/muse.js"></script>
+
+
+  <script src="/js/next-boot.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
