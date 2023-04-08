@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Insert HTML using JavaScript</title>
+</head>
+<body>
+
+	<h1>Insert HTML using JavaScript</h1>
+
+	<div id="myDiv">
+		<p>Before insertion</p>
+	</div>
+
+	<script type="text/javascript">
+		var xhr = new XMLHttpRequest();
+		xhr.open('GET', 'http://www.baidu.com', true);
+		xhr.onreadystatechange = function() {
+			if (this.readyState !== 4) return;
+			if (this.status !== 200) return; // or whatever error handling you want
+			document.getElementById('myDiv').innerHTML = this.responseText;
+		};
+		xhr.send();
+	</script>
+
+</body>
+</html>
