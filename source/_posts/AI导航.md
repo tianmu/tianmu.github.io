@@ -14,8 +14,12 @@ tags:
 [通义千问](https://tongyi.aliyun.com)| 阿里巴巴   |  1星
 
 # 图片生成
-|标题|来源|推荐|
-|---|---|---|
-|[dall-e-2](https://openai.com/product/dall-e-2)| open ai   |  ?星  |
-|[midjourney](https://www.midjourney.com/)| ?   |  5星  |
-|[Stable Diffusion](https://www.midjourney.com/)| ?   |  5星  |
+标题|来源|推荐|介绍
+---|---|---|:--
+[Stable Diffusion](https://www.midjourney.com/)| ?   |  5星  | ?
+[DALL-E](https://openai.com/product/dall-e-2)| open ai   |  ?星  | ?
+[Midjourney](https://www.midjourney.com/)| ?   |  5星  | ?
+[Openjourney](https://www.midjourney.com/)| ?   |  ?星  | 基于Stable Diffusion训练
+[anything](https://www.midjourney.com/)| ?   |  ?星  | 擅长二次元、动漫
+[dreamlike](https://www.midjourney.com/)| ?   |  ?星  | 基于Stable Diffusion微调
+[deliberate](https://www.midjourney.com/)| ?   |  ?星 | 擅长欧美人物
