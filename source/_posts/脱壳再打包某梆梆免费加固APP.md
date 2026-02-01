@@ -1,7 +1,8 @@
 ---
 title: 脱壳再打包某梆梆免费加固APP
 date: 2023-03-26 17:38:26
-tags:
+tags: 安全
+index_img: 
 ---
 原文链接：https://www.52pojie.cn/thread-1106387-1-1.html
 Apk: 梆梆免费加固apk，非2019最新版。

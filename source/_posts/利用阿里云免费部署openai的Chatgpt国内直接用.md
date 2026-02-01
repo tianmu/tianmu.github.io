@@ -1,8 +1,11 @@
 ---
 title: 利用阿里云免费部署openai的Chatgpt国内直接用
 date: 2023-04-15 11:34:55
-tags:
+tags: AI
+index_img: /images/chatgpt-aliyun/img1.png
 ---
+
+
 # 背景
 ![ChatGPT访问限制](/images/chatgpt-aliyun/img1.png)
 	国内无法直接访问ChatGPT，一访问就显示 code 1020。而且最近OpenAI查的比较严格，开始大规模对亚洲地区开始封号，对于经常乱跳IP的、同一个ip一堆账号的、之前淘宝机刷账号的，账号被封的可能性极大。  

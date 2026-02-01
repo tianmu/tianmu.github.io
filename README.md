@@ -5,19 +5,19 @@
 # 常用命令
 ## 启动服务
 ```
-hexo server
+npm run server
 ```
 ## 清除之前建立的靜態檔案
 ```
-hexo cl
+npm run clean
 ```
 ## 建立靜態頁面
 ```
-hexo g 
+npm run build 
 ```
 ## 部署至 GitHub  
 ```
-hexo d
+npm run deploy 
 ```
 
 
