@@ -1,26 +1,25 @@
+
+
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 6.3.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-<link rel="stylesheet" href="/css/main.css">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  
 
-
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
-  </script>
-
-  <meta name="description" content="背景    国内无法直接访问ChatGPT，一访问就显示 code 1020。而且最近OpenAI查的比较严格，开始大规模对亚洲地区开始封号，对于经常乱跳IP的、同一个ip一堆账号的、之前淘宝机刷账号的，账号被封的可能性极大。    那么有没有符合openai规定，个人独享且&#x3D;&#x3D;免费&#x3D;&#x3D;，可以在国内也稳定使用ChatGPT呢？有！本文教你如何使用阿里云，搭建">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="天幕">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="背景    国内无法直接访问ChatGPT，一访问就显示 code 1020。而且最近OpenAI查的比较严格，开始大规模对亚洲地区开始封号，对于经常乱跳IP的、同一个ip一堆账号的、之前淘宝机刷账号的，账号被封的可能性极大。    那么有没有符合openai规定，个人独享且&#x3D;&#x3D;免费&#x3D;&#x3D;，可以在国内也稳定使用ChatGPT呢？有！本文教你如何使用阿里云，搭建">
 <meta property="og:type" content="article">
 <meta property="og:title" content="利用阿里云免费部署openai的Chatgpt国内直接用">
 <meta property="og:url" content="http://example.com/2023/04/15/%E5%88%A9%E7%94%A8%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2openai%E7%9A%84Chatgpt%E5%9B%BD%E5%86%85%E7%9B%B4%E6%8E%A5%E7%94%A8/index.html">
@@ -28,432 +27,663 @@
 <meta property="og:description" content="背景    国内无法直接访问ChatGPT，一访问就显示 code 1020。而且最近OpenAI查的比较严格，开始大规模对亚洲地区开始封号，对于经常乱跳IP的、同一个ip一堆账号的、之前淘宝机刷账号的，账号被封的可能性极大。    那么有没有符合openai规定，个人独享且&#x3D;&#x3D;免费&#x3D;&#x3D;，可以在国内也稳定使用ChatGPT呢？有！本文教你如何使用阿里云，搭建">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/images/chatgpt-aliyun/img1.png">
-<meta property="og:image" content="http://example.com/images/chatgpt-aliyun/img2.png">
-<meta property="og:image" content="http://example.com/images/chatgpt-aliyun/img3.png">
-<meta property="og:image" content="http://example.com/images/chatgpt-aliyun/img4.png">
-<meta property="og:image" content="http://example.com/images/chatgpt-aliyun/img5.png">
-<meta property="og:image" content="http://example.com/images/chatgpt-aliyun/img6.png">
-<meta property="og:image" content="http://example.com/images/chatgpt-aliyun/img7.png">
-<meta property="og:image" content="http://example.com/images/chatgpt-aliyun/img8.png">
-<meta property="og:image" content="http://example.com/images/chatgpt-aliyun/img9.png">
 <meta property="article:published_time" content="2023-04-15T03:34:55.000Z">
-<meta property="article:modified_time" content="2026-02-01T08:23:57.740Z">
+<meta property="article:modified_time" content="2026-02-01T09:15:45.014Z">
 <meta property="article:author" content="天幕">
-<meta name="twitter:card" content="summary">
+<meta property="article:tag" content="AI">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://example.com/images/chatgpt-aliyun/img1.png">
-
-<link rel="canonical" href="http://example.com/2023/04/15/%E5%88%A9%E7%94%A8%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2openai%E7%9A%84Chatgpt%E5%9B%BD%E5%86%85%E7%9B%B4%E6%8E%A5%E7%94%A8/">
-
-
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : false,
-    isPost : true,
-    lang   : 'zh-CN'
-  };
-</script>
-
-  <title>利用阿里云免费部署openai的Chatgpt国内直接用 | 天幕的个人博客</title>
   
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2Z6MCJCG88"></script>
-    <script>
-      if (CONFIG.hostname === location.hostname) {
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-2Z6MCJCG88');
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>利用阿里云免费部署openai的Chatgpt国内直接用 - 天幕的个人博客</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":"G-2Z6MCJCG88"},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+    <!-- Google tag (gtag.js) -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript("https://www.googletagmanager.com/gtag/js?id=G-2Z6MCJCG88", function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', 'G-2Z6MCJCG88');
+        });
       }
     </script>
+  
 
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>天幕的个人博客</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/banner.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="利用阿里云免费部署openai的Chatgpt国内直接用"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-04-15 11:34" pubdate>
+          2023年4月15日 中午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          773 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          7 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">利用阿里云免费部署openai的Chatgpt国内直接用</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p><img src="/images/chatgpt-aliyun/img1.png" srcset="/img/loading.gif" lazyload alt="ChatGPT访问限制"><br>    国内无法直接访问ChatGPT，一访问就显示 code 1020。而且最近OpenAI查的比较严格，开始大规模对亚洲地区开始封号，对于经常乱跳IP的、同一个ip一堆账号的、之前淘宝机刷账号的，账号被封的可能性极大。<br>    那么有没有符合openai规定，个人独享且&#x3D;&#x3D;免费&#x3D;&#x3D;，可以在国内也稳定使用ChatGPT呢？有！本文教你如何使用阿里云，搭建我们自己的服务器。</p>
+<h1 id="openai账号"><a href="#openai账号" class="headerlink" title="openai账号"></a>openai账号</h1><p>首先你要有一个openai账号，如果没有对应的账号下面的内容就不用看了。<br>首先我们要记录下来账号的api key，首先打开网页<br><a target="_blank" rel="noopener" href="https://platform.openai.com/account/api-keys">openai platform</a>，点击右上角的个人，点击”View API keys”,点击”Create new secret key”，记录下来Secret key，留着后续使用。<strong>注意这个key千万不要给别人</strong><br><img src="/images/chatgpt-aliyun/img2.png" srcset="/img/loading.gif" lazyload alt="OpenAI API Keys"></p>
+<h1 id="阿里云云函数"><a href="#阿里云云函数" class="headerlink" title="阿里云云函数"></a>阿里云云函数</h1><p>前往<a target="_blank" rel="noopener" href="https://www.aliyun.com/product/fc?source=5176.11533457&userCode=s7xej6va">阿里云官网</a>,选择云函数，进入管理控制台。每一个用户均有3个月的免费时长。<br><img src="/images/chatgpt-aliyun/img3.png" srcset="/img/loading.gif" lazyload alt="阿里云云函数入口"><br>这里首先要选择机房，选择&#x3D;&#x3D;美国硅谷&#x3D;&#x3D;，这个是符合openai运营区域的，然后点击&#x3D;&#x3D;服务及函数&#x3D;&#x3D;，点击创建服务。<br><img src="/images/chatgpt-aliyun/img4.png" srcset="/img/loading.gif" lazyload alt="创建服务"><br>此时随便写一个名字，例如chatgpt（这个不重要）。再点击这个名字，进入到里面。选择函数管理，&#x3D;&#x3D;创建函数&#x3D;&#x3D;。<br><img src="/images/chatgpt-aliyun/img5.png" srcset="/img/loading.gif" lazyload alt="函数管理"></p>
+<p><img src="/images/chatgpt-aliyun/img6.png" srcset="/img/loading.gif" lazyload alt="创建函数配置"><br>在这里按如下要求填写，没有提到的就<strong>保持默认</strong>：</p>
+<p>请选择一种创建函数的方式：使用自定义运行时创建<br>函数名称：随意填写<br>请求处理程序类型：处理HTTP请求<br>运行环境：Node.js 16<br>代码上传方式: 通过zip包上传代码， 代码下载地址<a target="_blank" rel="noopener" href="https://github.com/tianmu/openai-proxy/releases/download/1.0/openai-proxy.zip">openai-proxy</a>，然后托上去即可。<br>启动命令：node app.js<br>监听端口： 9000<br>规格方案：选择最小的就够用了。vCPU 规格 0.05 内存规格 128<br>实例并发度：2<br>执行超时时间：900 （一般一句话不会超过900秒）<br><img src="/images/chatgpt-aliyun/img7.png" srcset="/img/loading.gif" lazyload alt="函数配置详情"><br>现在你的openai成功创建好了！！！<br>点击触发器管理，就可以看到你的url，配置到各种openai工具里就能用咯。<br><img src="/images/chatgpt-aliyun/img8.png" srcset="/img/loading.gif" lazyload alt="触发器URL"></p>
+<h1 id="gpt客户端"><a href="#gpt客户端" class="headerlink" title="gpt客户端"></a>gpt客户端</h1><p>此时可以使用各种支持自定义网址的客户端，直接在本地畅玩。<br>例如：<br>BetterChatGPT：<a target="_blank" rel="noopener" href="https://github.com/ztjhz/BetterChatGPT/releases/tag/v1.0.2">https://github.com/ztjhz/BetterChatGPT/releases/tag/v1.0.2</a><br><img src="/images/chatgpt-aliyun/img9.png" srcset="/img/loading.gif" lazyload alt="BetterChatGPT配置"><br>注意：<a target="_blank" rel="noopener" href="https://xxx.fcapp.run/v1/chat/completions">https://xxx.fcapp.run/v1/chat/completions</a> 是我们刚才在阿里云函数里的公网地址，不同的软件可能需要配置为<a target="_blank" rel="noopener" href="https://xxx.fcapp.run或https//xxx.fcapp.run/v1/">https://xxx.fcapp.run或https://xxx.fcapp.run/v1/</a></p>
+<h1 id="开发者提醒"><a href="#开发者提醒" class="headerlink" title="开发者提醒"></a>开发者提醒</h1><p>官网文档：<a target="_blank" rel="noopener" href="https://platform.openai.com/docs/api-reference">https://platform.openai.com/docs/api-reference</a><br>使用官网node开发：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">const</span> openai = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;openai&quot;</span>);<br><span class="hljs-keyword">const</span> <span class="hljs-title class_">Configuration</span> = openai.<span class="hljs-property">Configuration</span>;<br><span class="hljs-keyword">const</span> <span class="hljs-title class_">OpenAIApi</span> = openai.<span class="hljs-property">OpenAIApi</span>;<br><br><span class="hljs-keyword">const</span> configuration = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Configuration</span>(&#123;<br>    <span class="hljs-attr">apiKey</span>: process.<span class="hljs-property">env</span>.<span class="hljs-property">OPENAI_API_KEY</span>,<br>    <span class="hljs-attr">basePath</span>: <span class="hljs-string">&quot;https://xxx.fcapp.run/v1&quot;</span>,<br>&#125;);<br><br><span class="hljs-keyword">const</span> openaiApi = <span class="hljs-keyword">new</span> <span class="hljs-title class_">OpenAIApi</span>(configuration);<br><span class="hljs-keyword">const</span> response = openaiApi.<span class="hljs-title function_">listModels</span>();<br></code></pre></td></tr></table></figure>
+<p>使用官网python开发：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> os<br><span class="hljs-keyword">import</span> openai<br><br>openai.api_key = <span class="hljs-string">&quot;OPENAI_API_KEY&quot;</span><br><span class="hljs-comment"># python开发必须有v1</span><br>openai.api_base = <span class="hljs-string">&quot;https://xxx.fcapp.run/v1&quot;</span><br>openai.Model.<span class="hljs-built_in">list</span>()<br></code></pre></td></tr></table></figure>
+
+<p><code>版权声明：本文为CSDN博主「fsafs168」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。 原文链接：https://blog.csdn.net/fsafs168/article/details/130166098</code></p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/AI/" class="print-no-link">#AI</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>利用阿里云免费部署openai的Chatgpt国内直接用</div>
+      <div>http://example.com/2023/04/15/利用阿里云免费部署openai的Chatgpt国内直接用/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>天幕</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2023年4月15日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2023/04/08/AI%E5%AF%BC%E8%88%AA/" title="AI导航">
+                        <span class="hidden-mobile">AI导航</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+
+  
+
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
 
   <script>
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?6d55ca4fdf950a25d52201ab6abfe8aa";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
   </script>
 
 
 
 
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
-
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
-  </div>
-
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">天幕的个人博客</h1>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-    </div>
-  </div>
-</div>
-
-
-
-
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
-
-  </li>
-        <li class="menu-item menu-item-ai">
-
-    <a href="/html/ai/ai.htm" rel="section"><i class="fas fa-user fa-fw"></i>AI</a>
-
-  </li>
-  </ul>
-</nav>
-
-
-
-
-</div>
-    </header>
-
-    
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content post posts-expand">
-            
-
-    
   
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/04/15/%E5%88%A9%E7%94%A8%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2openai%E7%9A%84Chatgpt%E5%9B%BD%E5%86%85%E7%9B%B4%E6%8E%A5%E7%94%A8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="天幕">
-      <meta itemprop="description" content="强学力行、顺势而为">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="天幕的个人博客">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          利用阿里云免费部署openai的Chatgpt国内直接用
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-04-15 11:34:55" itemprop="dateCreated datePublished" datetime="2023-04-15T11:34:55+08:00">2023-04-15</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2026-02-01 16:23:57" itemprop="dateModified" datetime="2026-02-01T16:23:57+08:00">2026-02-01</time>
-              </span>
-
-          
-            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span id="busuanzi_value_page_pv"></span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-        <h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p><img src="/images/chatgpt-aliyun/img1.png" alt="ChatGPT访问限制"><br>    国内无法直接访问ChatGPT，一访问就显示 code 1020。而且最近OpenAI查的比较严格，开始大规模对亚洲地区开始封号，对于经常乱跳IP的、同一个ip一堆账号的、之前淘宝机刷账号的，账号被封的可能性极大。<br>    那么有没有符合openai规定，个人独享且&#x3D;&#x3D;免费&#x3D;&#x3D;，可以在国内也稳定使用ChatGPT呢？有！本文教你如何使用阿里云，搭建我们自己的服务器。</p>
-<h1 id="openai账号"><a href="#openai账号" class="headerlink" title="openai账号"></a>openai账号</h1><p>首先你要有一个openai账号，如果没有对应的账号下面的内容就不用看了。<br>首先我们要记录下来账号的api key，首先打开网页<br><a target="_blank" rel="noopener" href="https://platform.openai.com/account/api-keys">openai platform</a>，点击右上角的个人，点击”View API keys”,点击”Create new secret key”，记录下来Secret key，留着后续使用。<strong>注意这个key千万不要给别人</strong><br><img src="/images/chatgpt-aliyun/img2.png" alt="OpenAI API Keys"></p>
-<h1 id="阿里云云函数"><a href="#阿里云云函数" class="headerlink" title="阿里云云函数"></a>阿里云云函数</h1><p>前往<a target="_blank" rel="noopener" href="https://www.aliyun.com/product/fc?source=5176.11533457&userCode=s7xej6va">阿里云官网</a>,选择云函数，进入管理控制台。每一个用户均有3个月的免费时长。<br><img src="/images/chatgpt-aliyun/img3.png" alt="阿里云云函数入口"><br>这里首先要选择机房，选择&#x3D;&#x3D;美国硅谷&#x3D;&#x3D;，这个是符合openai运营区域的，然后点击&#x3D;&#x3D;服务及函数&#x3D;&#x3D;，点击创建服务。<br><img src="/images/chatgpt-aliyun/img4.png" alt="创建服务"><br>此时随便写一个名字，例如chatgpt（这个不重要）。再点击这个名字，进入到里面。选择函数管理，&#x3D;&#x3D;创建函数&#x3D;&#x3D;。<br><img src="/images/chatgpt-aliyun/img5.png" alt="函数管理"></p>
-<p><img src="/images/chatgpt-aliyun/img6.png" alt="创建函数配置"><br>在这里按如下要求填写，没有提到的就<strong>保持默认</strong>：</p>
-<p>请选择一种创建函数的方式：使用自定义运行时创建<br>函数名称：随意填写<br>请求处理程序类型：处理HTTP请求<br>运行环境：Node.js 16<br>代码上传方式: 通过zip包上传代码， 代码下载地址<a target="_blank" rel="noopener" href="https://github.com/tianmu/openai-proxy/releases/download/1.0/openai-proxy.zip">openai-proxy</a>，然后托上去即可。<br>启动命令：node app.js<br>监听端口： 9000<br>规格方案：选择最小的就够用了。vCPU 规格 0.05 内存规格 128<br>实例并发度：2<br>执行超时时间：900 （一般一句话不会超过900秒）<br><img src="/images/chatgpt-aliyun/img7.png" alt="函数配置详情"><br>现在你的openai成功创建好了！！！<br>点击触发器管理，就可以看到你的url，配置到各种openai工具里就能用咯。<br><img src="/images/chatgpt-aliyun/img8.png" alt="触发器URL"></p>
-<h1 id="gpt客户端"><a href="#gpt客户端" class="headerlink" title="gpt客户端"></a>gpt客户端</h1><p>此时可以使用各种支持自定义网址的客户端，直接在本地畅玩。<br>例如：<br>BetterChatGPT：<a target="_blank" rel="noopener" href="https://github.com/ztjhz/BetterChatGPT/releases/tag/v1.0.2">https://github.com/ztjhz/BetterChatGPT/releases/tag/v1.0.2</a><br><img src="/images/chatgpt-aliyun/img9.png" alt="BetterChatGPT配置"><br>注意：<a target="_blank" rel="noopener" href="https://xxx.fcapp.run/v1/chat/completions">https://xxx.fcapp.run/v1/chat/completions</a> 是我们刚才在阿里云函数里的公网地址，不同的软件可能需要配置为<a target="_blank" rel="noopener" href="https://xxx.fcapp.run或https//xxx.fcapp.run/v1/">https://xxx.fcapp.run或https://xxx.fcapp.run/v1/</a></p>
-<h1 id="开发者提醒"><a href="#开发者提醒" class="headerlink" title="开发者提醒"></a>开发者提醒</h1><p>官网文档：<a target="_blank" rel="noopener" href="https://platform.openai.com/docs/api-reference">https://platform.openai.com/docs/api-reference</a><br>使用官网node开发：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> openai = <span class="built_in">require</span>(<span class="string">&quot;openai&quot;</span>);</span><br><span class="line"><span class="keyword">const</span> <span class="title class_">Configuration</span> = openai.<span class="property">Configuration</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="title class_">OpenAIApi</span> = openai.<span class="property">OpenAIApi</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> configuration = <span class="keyword">new</span> <span class="title class_">Configuration</span>(&#123;</span><br><span class="line">    <span class="attr">apiKey</span>: process.<span class="property">env</span>.<span class="property">OPENAI_API_KEY</span>,</span><br><span class="line">    <span class="attr">basePath</span>: <span class="string">&quot;https://xxx.fcapp.run/v1&quot;</span>,</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> openaiApi = <span class="keyword">new</span> <span class="title class_">OpenAIApi</span>(configuration);</span><br><span class="line"><span class="keyword">const</span> response = openaiApi.<span class="title function_">listModels</span>();</span><br></pre></td></tr></table></figure>
-<p>使用官网python开发：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> openai</span><br><span class="line"></span><br><span class="line">openai.api_key = <span class="string">&quot;OPENAI_API_KEY&quot;</span></span><br><span class="line"><span class="comment"># python开发必须有v1</span></span><br><span class="line">openai.api_base = <span class="string">&quot;https://xxx.fcapp.run/v1&quot;</span></span><br><span class="line">openai.Model.<span class="built_in">list</span>()</span><br></pre></td></tr></table></figure>
-
-<p><code>版权声明：本文为CSDN博主「fsafs168」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。 原文链接：https://blog.csdn.net/fsafs168/article/details/130166098</code></p>
-
-    </div>
-
-    
-    
-    
-
-      <footer class="post-footer">
-
-        
-
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2023/04/08/AI%E5%AF%BC%E8%88%AA/" rel="prev" title="AI导航">
-      <i class="fa fa-chevron-left"></i> AI导航
-    </a></div>
-      <div class="post-nav-item"></div>
-    </div>
-      </footer>
-    
-  </article>
-  
-  
+    <script  src="/js/img-lazyload.js" ></script>
   
 
 
 
-          </div>
-          
 
+  
 <script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
     }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
       }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
     });
-  }
+  });
 </script>
 
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
 
-  <aside class="sidebar">
-    <div class="sidebar-inner">
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
 
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
+  <script>Fluid.plugins.codeWidget();</script>
 
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%83%8C%E6%99%AF"><span class="nav-number">1.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#openai%E8%B4%A6%E5%8F%B7"><span class="nav-number">2.</span> <span class="nav-text">openai账号</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%98%BF%E9%87%8C%E4%BA%91%E4%BA%91%E5%87%BD%E6%95%B0"><span class="nav-number">3.</span> <span class="nav-text">阿里云云函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#gpt%E5%AE%A2%E6%88%B7%E7%AB%AF"><span class="nav-number">4.</span> <span class="nav-text">gpt客户端</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BC%80%E5%8F%91%E8%80%85%E6%8F%90%E9%86%92"><span class="nav-number">5.</span> <span class="nav-text">开发者提醒</span></a></li></ol></div>
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">天幕</p>
-  <div class="site-description" itemprop="description">强学力行、顺势而为</div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">3</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-  </nav>
-</div>
-
-
-
-      </div>
-
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2026</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">天幕</span>
-</div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
-  </div>
-
-        
-<div class="busuanzi-count">
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-user"></i>
-      </span>
-      <span class="site-uv" title="总访客量">
-        <span id="busuanzi_value_site_uv"></span>
-      </span>
-    </span>
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-eye"></i>
-      </span>
-      <span class="site-pv" title="总访问量">
-        <span id="busuanzi_value_site_pv"></span>
-      </span>
-    </span>
-</div>
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
 
   
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
 
-<script src="/js/utils.js"></script>
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
 
-<script src="/js/motion.js"></script>
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
 
 
-<script src="/js/schemes/muse.js"></script>
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
 
-<script src="/js/next-boot.js"></script>
 
 
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
 
 
   
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
 </body>
 </html>

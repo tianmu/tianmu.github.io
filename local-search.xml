@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>利用阿里云免费部署openai的Chatgpt国内直接用</title>
+    <link href="/2023/04/15/%E5%88%A9%E7%94%A8%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2openai%E7%9A%84Chatgpt%E5%9B%BD%E5%86%85%E7%9B%B4%E6%8E%A5%E7%94%A8/"/>
+    <url>/2023/04/15/%E5%88%A9%E7%94%A8%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2openai%E7%9A%84Chatgpt%E5%9B%BD%E5%86%85%E7%9B%B4%E6%8E%A5%E7%94%A8/</url>
+    
+    <content type="html"><![CDATA[<h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p><img src="/images/chatgpt-aliyun/img1.png" alt="ChatGPT访问限制"><br>    国内无法直接访问ChatGPT，一访问就显示 code 1020。而且最近OpenAI查的比较严格，开始大规模对亚洲地区开始封号，对于经常乱跳IP的、同一个ip一堆账号的、之前淘宝机刷账号的，账号被封的可能性极大。<br>    那么有没有符合openai规定，个人独享且&#x3D;&#x3D;免费&#x3D;&#x3D;，可以在国内也稳定使用ChatGPT呢？有！本文教你如何使用阿里云，搭建我们自己的服务器。</p><h1 id="openai账号"><a href="#openai账号" class="headerlink" title="openai账号"></a>openai账号</h1><p>首先你要有一个openai账号，如果没有对应的账号下面的内容就不用看了。<br>首先我们要记录下来账号的api key，首先打开网页<br><a href="https://platform.openai.com/account/api-keys">openai platform</a>，点击右上角的个人，点击”View API keys”,点击”Create new secret key”，记录下来Secret key，留着后续使用。<strong>注意这个key千万不要给别人</strong><br><img src="/images/chatgpt-aliyun/img2.png" alt="OpenAI API Keys"></p><h1 id="阿里云云函数"><a href="#阿里云云函数" class="headerlink" title="阿里云云函数"></a>阿里云云函数</h1><p>前往<a href="https://www.aliyun.com/product/fc?source=5176.11533457&userCode=s7xej6va">阿里云官网</a>,选择云函数，进入管理控制台。每一个用户均有3个月的免费时长。<br><img src="/images/chatgpt-aliyun/img3.png" alt="阿里云云函数入口"><br>这里首先要选择机房，选择&#x3D;&#x3D;美国硅谷&#x3D;&#x3D;，这个是符合openai运营区域的，然后点击&#x3D;&#x3D;服务及函数&#x3D;&#x3D;，点击创建服务。<br><img src="/images/chatgpt-aliyun/img4.png" alt="创建服务"><br>此时随便写一个名字，例如chatgpt（这个不重要）。再点击这个名字，进入到里面。选择函数管理，&#x3D;&#x3D;创建函数&#x3D;&#x3D;。<br><img src="/images/chatgpt-aliyun/img5.png" alt="函数管理"></p><p><img src="/images/chatgpt-aliyun/img6.png" alt="创建函数配置"><br>在这里按如下要求填写，没有提到的就<strong>保持默认</strong>：</p><p>请选择一种创建函数的方式：使用自定义运行时创建<br>函数名称：随意填写<br>请求处理程序类型：处理HTTP请求<br>运行环境：Node.js 16<br>代码上传方式: 通过zip包上传代码， 代码下载地址<a href="https://github.com/tianmu/openai-proxy/releases/download/1.0/openai-proxy.zip">openai-proxy</a>，然后托上去即可。<br>启动命令：node app.js<br>监听端口： 9000<br>规格方案：选择最小的就够用了。vCPU 规格 0.05 内存规格 128<br>实例并发度：2<br>执行超时时间：900 （一般一句话不会超过900秒）<br><img src="/images/chatgpt-aliyun/img7.png" alt="函数配置详情"><br>现在你的openai成功创建好了！！！<br>点击触发器管理，就可以看到你的url，配置到各种openai工具里就能用咯。<br><img src="/images/chatgpt-aliyun/img8.png" alt="触发器URL"></p><h1 id="gpt客户端"><a href="#gpt客户端" class="headerlink" title="gpt客户端"></a>gpt客户端</h1><p>此时可以使用各种支持自定义网址的客户端，直接在本地畅玩。<br>例如：<br>BetterChatGPT：<a href="https://github.com/ztjhz/BetterChatGPT/releases/tag/v1.0.2">https://github.com/ztjhz/BetterChatGPT/releases/tag/v1.0.2</a><br><img src="/images/chatgpt-aliyun/img9.png" alt="BetterChatGPT配置"><br>注意：<a href="https://xxx.fcapp.run/v1/chat/completions">https://xxx.fcapp.run/v1/chat/completions</a> 是我们刚才在阿里云函数里的公网地址，不同的软件可能需要配置为<a href="https://xxx.fcapp.run或https//xxx.fcapp.run/v1/">https://xxx.fcapp.run或https://xxx.fcapp.run/v1/</a></p><h1 id="开发者提醒"><a href="#开发者提醒" class="headerlink" title="开发者提醒"></a>开发者提醒</h1><p>官网文档：<a href="https://platform.openai.com/docs/api-reference">https://platform.openai.com/docs/api-reference</a><br>使用官网node开发：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">const</span> openai = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;openai&quot;</span>);<br><span class="hljs-keyword">const</span> <span class="hljs-title class_">Configuration</span> = openai.<span class="hljs-property">Configuration</span>;<br><span class="hljs-keyword">const</span> <span class="hljs-title class_">OpenAIApi</span> = openai.<span class="hljs-property">OpenAIApi</span>;<br><br><span class="hljs-keyword">const</span> configuration = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Configuration</span>(&#123;<br>    <span class="hljs-attr">apiKey</span>: process.<span class="hljs-property">env</span>.<span class="hljs-property">OPENAI_API_KEY</span>,<br>    <span class="hljs-attr">basePath</span>: <span class="hljs-string">&quot;https://xxx.fcapp.run/v1&quot;</span>,<br>&#125;);<br><br><span class="hljs-keyword">const</span> openaiApi = <span class="hljs-keyword">new</span> <span class="hljs-title class_">OpenAIApi</span>(configuration);<br><span class="hljs-keyword">const</span> response = openaiApi.<span class="hljs-title function_">listModels</span>();<br></code></pre></td></tr></table></figure><p>使用官网python开发：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> os<br><span class="hljs-keyword">import</span> openai<br><br>openai.api_key = <span class="hljs-string">&quot;OPENAI_API_KEY&quot;</span><br><span class="hljs-comment"># python开发必须有v1</span><br>openai.api_base = <span class="hljs-string">&quot;https://xxx.fcapp.run/v1&quot;</span><br>openai.Model.<span class="hljs-built_in">list</span>()<br></code></pre></td></tr></table></figure><p><code>版权声明：本文为CSDN博主「fsafs168」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。 原文链接：https://blog.csdn.net/fsafs168/article/details/130166098</code></p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>AI</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>AI导航</title>
+    <link href="/2023/04/08/AI%E5%AF%BC%E8%88%AA/"/>
+    <url>/2023/04/08/AI%E5%AF%BC%E8%88%AA/</url>
+    
+    <content type="html"><![CDATA[<h1 id="多态大模型"><a href="#多态大模型" class="headerlink" title="多态大模型"></a>多态大模型</h1><table><thead><tr><th align="left">标题</th><th align="center">来源</th><th align="center">推荐</th></tr></thead><tbody><tr><td align="left"><a href="https://chat.openai.com/">chatgpt</a></td><td align="center">open ai</td><td align="center">5星</td></tr><tr><td align="left"><a href="https://bing.com/">new bing</a></td><td align="center">microsoft</td><td align="center">5星</td></tr><tr><td align="left"><a href="https://bard.google.com/">bard</a></td><td align="center">google</td><td align="center">3星</td></tr><tr><td align="left"><a href="https://yiyan.baidu.com/">文心一言</a></td><td align="center">百度</td><td align="center">1星</td></tr><tr><td align="left"><a href="https://tongyi.aliyun.com/">通义千问</a></td><td align="center">阿里巴巴</td><td align="center">1星</td></tr></tbody></table><h1 id="图片生成"><a href="#图片生成" class="headerlink" title="图片生成"></a>图片生成</h1><table><thead><tr><th>标题</th><th>来源</th><th>推荐</th><th align="left">介绍</th></tr></thead><tbody><tr><td><a href="https://www.midjourney.com/">Stable Diffusion</a></td><td>?</td><td>5星</td><td align="left">?</td></tr><tr><td><a href="https://openai.com/product/dall-e-2">DALL-E</a></td><td>open ai</td><td>?星</td><td align="left">?</td></tr><tr><td><a href="https://www.midjourney.com/">Midjourney</a></td><td>?</td><td>5星</td><td align="left">?</td></tr><tr><td><a href="https://www.midjourney.com/">Openjourney</a></td><td>?</td><td>?星</td><td align="left">基于Stable Diffusion训练</td></tr><tr><td><a href="https://www.midjourney.com/">anything</a></td><td>?</td><td>?星</td><td align="left">擅长二次元、动漫</td></tr><tr><td><a href="https://www.midjourney.com/">dreamlike</a></td><td>?</td><td>?星</td><td align="left">基于Stable Diffusion微调</td></tr><tr><td><a href="https://www.midjourney.com/">deliberate</a></td><td>?</td><td>?星</td><td align="left">擅长欧美人物</td></tr></tbody></table>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>ai</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>脱壳再打包某梆梆免费加固APP</title>
+    <link href="/2023/03/26/%E8%84%B1%E5%A3%B3%E5%86%8D%E6%89%93%E5%8C%85%E6%9F%90%E6%A2%86%E6%A2%86%E5%85%8D%E8%B4%B9%E5%8A%A0%E5%9B%BAAPP/"/>
+    <url>/2023/03/26/%E8%84%B1%E5%A3%B3%E5%86%8D%E6%89%93%E5%8C%85%E6%9F%90%E6%A2%86%E6%A2%86%E5%85%8D%E8%B4%B9%E5%8A%A0%E5%9B%BAAPP/</url>
+    
+    <content type="html"><![CDATA[<p>原文链接：<a href="https://www.52pojie.cn/thread-1106387-1-1.html">https://www.52pojie.cn/thread-1106387-1-1.html</a><br>Apk: 梆梆免费加固apk，非2019最新版。</p><p>准备工具：<br>Apktool<br>dex-tools-2.1-SNAPSHOT<br>smali-2.3.4<br>DexExtractor<br>jd-gui  </p><p>整体也是这个流程：<br>脱壳拿到DEX — 替换smali源码 — 修复AndroidManifest.xml — 重打包 — 签名运行</p><p>一、使用Apktool解压apk<br>.\apktool.bat d xxx.apk</p><p>二、解压apk，拿出classes<br>这个时候我们发现，有梆梆加固的壳。所以不用再看classes了。搜索了相关的脱壳方法后，使用DexExtractor</p><p>三、使用DexExtractor脱壳<br><img src="/images/bangbang-unpack/img1.png" alt="DexExtractor脱壳"></p><p>脱壳后得到了一堆加密的dex文件，将其放到dex文件夹下面，接下来尝试解密<br>使用DexExtractor的Decode.jar进行解密  </p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">java -jar Decode.jar dex  <br></code></pre></td></tr></table></figure><p>得到一堆解密后的dex<br><img src="/images/bangbang-unpack/img2.png" alt="解密后的dex文件"></p><p>这么多的话有点不对劲，解开成java文件看一下：<br>使用dex-tools-2.1-SNAPSHOT的d2j-dex2jar将dex转换为jar文件，然后用jd-gui打开查看。<br><img src="/images/bangbang-unpack/img3.png" alt="查看Java代码"><br>发现代码都在com.xxx.springclasses*.read-dex2jar，别的都是重复的代码。<br>因此将对应的dex转换为smail。然后放到最早使用apktool解压的文件夹下面，新建一个文件夹smali，放入相关代码。<br>使用smali-2.3.4将dex转换为smail  </p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">java -jar .\baksmali-2.1.3.jar .\dex\com.xxx.spring_classes_8842384.read.dex<br></code></pre></td></tr></table></figure><p>文件会输出到out文件夹里面。</p><p>四、将smail文件放到解压APK的文件夹里<br>将对应的dex，放到对应的classes。取名字smali，smali_classes2。最后可以再打包的apk文件夹如下：</p><p><img src="/images/bangbang-unpack/img4.png" alt="APK文件夹结构"></p><p>五、修改AndroidManifest<br>这个时候，根据jar文件里的内容，搜索哪个类继承了application或者MultiDexApplication，然后修改AndroidManifest.xml。将android:name修改为对应的class。</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">application</span> <span class="hljs-attr">android:name</span>=<span class="hljs-string">&quot;这里就是要修改的地方，改为：com.xx.xxApplication&quot;</span> <span class="hljs-attr">android:theme</span>=<span class="hljs-string">&quot;@style/AppTheme&quot;</span>&gt;</span><br></code></pre></td></tr></table></figure><p>六、修改要修改的部分<br>这个部分就直接修改对应的smail文件就好了。</p><p>七、重新打包<br>Xxx为对应apktool解压apk的文件夹</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">.\apktool.bat b xxx -o app-release1.apk<br></code></pre></td></tr></table></figure><p>八、重新签名<br>重新签名我使用的360的再签名工具，360Signer.exe。</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>安全</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  
+</search>
