@@ -23,7 +23,7 @@ jd-gui
 这个时候我们发现，有梆梆加固的壳。所以不用再看classes了。搜索了相关的脱壳方法后，使用DexExtractor
 
 三、使用DexExtractor脱壳
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200418191300581.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2ZzYWZzMTY4,size_16,color_FFFFFF,t_70)
+![DexExtractor脱壳](/images/bangbang-unpack/img1.png)
 
 
 脱壳后得到了一堆加密的dex文件，将其放到dex文件夹下面，接下来尝试解密
@@ -32,12 +32,12 @@ jd-gui
 java -jar Decode.jar dex  
 ```
 得到一堆解密后的dex
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200418191314261.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2ZzYWZzMTY4,size_16,color_FFFFFF,t_70)
+![解密后的dex文件](/images/bangbang-unpack/img2.png)
 
 
 这么多的话有点不对劲，解开成java文件看一下：
 使用dex-tools-2.1-SNAPSHOT的d2j-dex2jar将dex转换为jar文件，然后用jd-gui打开查看。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200418191321102.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2ZzYWZzMTY4,size_16,color_FFFFFF,t_70)
+![查看Java代码](/images/bangbang-unpack/img3.png)
 发现代码都在com.xxx.springclasses*.read-dex2jar，别的都是重复的代码。
 因此将对应的dex转换为smail。然后放到最早使用apktool解压的文件夹下面，新建一个文件夹smali，放入相关代码。
 使用smali-2.3.4将dex转换为smail  
@@ -49,7 +49,7 @@ java -jar Decode.jar dex
 四、将smail文件放到解压APK的文件夹里
 将对应的dex，放到对应的classes。取名字smali，smali_classes2。最后可以再打包的apk文件夹如下：
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200418191333447.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2ZzYWZzMTY4,size_16,color_FFFFFF,t_70)
+![APK文件夹结构](/images/bangbang-unpack/img4.png)
   
 五、修改AndroidManifest
 这个时候，根据jar文件里的内容，搜索哪个类继承了application或者MultiDexApplication，然后修改AndroidManifest.xml。将android:name修改为对应的class。
