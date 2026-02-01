@@ -27,15 +27,15 @@
 <meta property="og:site_name" content="天幕的个人博客">
 <meta property="og:description" content="原文链接：https:&#x2F;&#x2F;www.52pojie.cn&#x2F;thread-1106387-1-1.htmlApk: 梆梆免费加固apk，非2019最新版。 准备工具：Apktooldex-tools-2.1-SNAPSHOTsmali-2.3.4DexExtractorjd-gui   整体也是这个流程：脱壳拿到DEX — 替换smali源码 — 修复AndroidManifest.xml — 重打包">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200418191300581.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2ZzYWZzMTY4,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200418191314261.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2ZzYWZzMTY4,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200418191321102.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2ZzYWZzMTY4,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200418191333447.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2ZzYWZzMTY4,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="http://example.com/images/bangbang-unpack/img1.png">
+<meta property="og:image" content="http://example.com/images/bangbang-unpack/img2.png">
+<meta property="og:image" content="http://example.com/images/bangbang-unpack/img3.png">
+<meta property="og:image" content="http://example.com/images/bangbang-unpack/img4.png">
 <meta property="article:published_time" content="2023-03-26T09:38:26.000Z">
-<meta property="article:modified_time" content="2023-03-27T16:00:05.053Z">
+<meta property="article:modified_time" content="2026-02-01T08:24:19.127Z">
 <meta property="article:author" content="天幕">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200418191300581.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2ZzYWZzMTY4,size_16,color_FFFFFF,t_70">
+<meta name="twitter:image" content="http://example.com/images/bangbang-unpack/img1.png">
 
 <link rel="canonical" href="http://example.com/2023/03/26/%E8%84%B1%E5%A3%B3%E5%86%8D%E6%89%93%E5%8C%85%E6%9F%90%E6%A2%86%E6%A2%86%E5%85%8D%E8%B4%B9%E5%8A%A0%E5%9B%BAAPP/">
 
@@ -209,7 +209,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-03-28 00:00:05" itemprop="dateModified" datetime="2023-03-28T00:00:05+08:00">2023-03-28</time>
+                <time title="修改时间：2026-02-01 16:24:19" itemprop="dateModified" datetime="2026-02-01T16:24:19+08:00">2026-02-01</time>
               </span>
 
           
@@ -228,15 +228,15 @@
 <p>整体也是这个流程：<br>脱壳拿到DEX — 替换smali源码 — 修复AndroidManifest.xml — 重打包 — 签名运行</p>
 <p>一、使用Apktool解压apk<br>.\apktool.bat d xxx.apk</p>
 <p>二、解压apk，拿出classes<br>这个时候我们发现，有梆梆加固的壳。所以不用再看classes了。搜索了相关的脱壳方法后，使用DexExtractor</p>
-<p>三、使用DexExtractor脱壳<br><img src="https://img-blog.csdnimg.cn/20200418191300581.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2ZzYWZzMTY4,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>三、使用DexExtractor脱壳<br><img src="/images/bangbang-unpack/img1.png" alt="DexExtractor脱壳"></p>
 <p>脱壳后得到了一堆加密的dex文件，将其放到dex文件夹下面，接下来尝试解密<br>使用DexExtractor的Decode.jar进行解密  </p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -jar Decode.jar dex  </span><br></pre></td></tr></table></figure>
-<p>得到一堆解密后的dex<br><img src="https://img-blog.csdnimg.cn/20200418191314261.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2ZzYWZzMTY4,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>这么多的话有点不对劲，解开成java文件看一下：<br>使用dex-tools-2.1-SNAPSHOT的d2j-dex2jar将dex转换为jar文件，然后用jd-gui打开查看。<br><img src="https://img-blog.csdnimg.cn/20200418191321102.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2ZzYWZzMTY4,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>发现代码都在com.xxx.springclasses*.read-dex2jar，别的都是重复的代码。<br>因此将对应的dex转换为smail。然后放到最早使用apktool解压的文件夹下面，新建一个文件夹smali，放入相关代码。<br>使用smali-2.3.4将dex转换为smail  </p>
+<p>得到一堆解密后的dex<br><img src="/images/bangbang-unpack/img2.png" alt="解密后的dex文件"></p>
+<p>这么多的话有点不对劲，解开成java文件看一下：<br>使用dex-tools-2.1-SNAPSHOT的d2j-dex2jar将dex转换为jar文件，然后用jd-gui打开查看。<br><img src="/images/bangbang-unpack/img3.png" alt="查看Java代码"><br>发现代码都在com.xxx.springclasses*.read-dex2jar，别的都是重复的代码。<br>因此将对应的dex转换为smail。然后放到最早使用apktool解压的文件夹下面，新建一个文件夹smali，放入相关代码。<br>使用smali-2.3.4将dex转换为smail  </p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -jar .\baksmali-2.1.3.jar .\dex\com.xxx.spring_classes_8842384.read.dex</span><br></pre></td></tr></table></figure>
 <p>文件会输出到out文件夹里面。</p>
 <p>四、将smail文件放到解压APK的文件夹里<br>将对应的dex，放到对应的classes。取名字smali，smali_classes2。最后可以再打包的apk文件夹如下：</p>
-<p><img src="https://img-blog.csdnimg.cn/20200418191333447.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2ZzYWZzMTY4,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><img src="/images/bangbang-unpack/img4.png" alt="APK文件夹结构"></p>
 <p>五、修改AndroidManifest<br>这个时候，根据jar文件里的内容，搜索哪个类继承了application或者MultiDexApplication，然后修改AndroidManifest.xml。将android:name修改为对应的class。</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">application</span> <span class="attr">android:name</span>=<span class="string">&quot;这里就是要修改的地方，改为：com.xx.xxApplication&quot;</span> <span class="attr">android:theme</span>=<span class="string">&quot;@style/AppTheme&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>六、修改要修改的部分<br>这个部分就直接修改对应的smail文件就好了。</p>
@@ -362,7 +362,7 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2023</span>
+  <span itemprop="copyrightYear">2026</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

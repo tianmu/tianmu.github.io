@@ -27,20 +27,20 @@
 <meta property="og:site_name" content="天幕的个人博客">
 <meta property="og:description" content="背景    国内无法直接访问ChatGPT，一访问就显示 code 1020。而且最近OpenAI查的比较严格，开始大规模对亚洲地区开始封号，对于经常乱跳IP的、同一个ip一堆账号的、之前淘宝机刷账号的，账号被封的可能性极大。    那么有没有符合openai规定，个人独享且&#x3D;&#x3D;免费&#x3D;&#x3D;，可以在国内也稳定使用ChatGPT呢？有！本文教你如何使用阿里云，搭建">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/c0b0e5d4ca3e4866b9f4c6467c40406c.png">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/838fc29fd8024c2ba881706e0ac8f0b1.png">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/1cc6e99e1fc742d998b8d70990d40483.png">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/c5839e0853c44e0ca165eccb0603948e.png">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/4604422878414d7b8de3df46b75613d1.png">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/2ed924c4ad044e379cce457a280bc28b.png">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/d4f8b802779645d988c5703d927323f3.png">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/103547a24401432bbd475865f70c6d73.png">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/b3eeae2311f340679bc2a5b9eebfeb1c.png">
+<meta property="og:image" content="http://example.com/images/chatgpt-aliyun/img1.png">
+<meta property="og:image" content="http://example.com/images/chatgpt-aliyun/img2.png">
+<meta property="og:image" content="http://example.com/images/chatgpt-aliyun/img3.png">
+<meta property="og:image" content="http://example.com/images/chatgpt-aliyun/img4.png">
+<meta property="og:image" content="http://example.com/images/chatgpt-aliyun/img5.png">
+<meta property="og:image" content="http://example.com/images/chatgpt-aliyun/img6.png">
+<meta property="og:image" content="http://example.com/images/chatgpt-aliyun/img7.png">
+<meta property="og:image" content="http://example.com/images/chatgpt-aliyun/img8.png">
+<meta property="og:image" content="http://example.com/images/chatgpt-aliyun/img9.png">
 <meta property="article:published_time" content="2023-04-15T03:34:55.000Z">
-<meta property="article:modified_time" content="2023-04-15T03:41:59.459Z">
+<meta property="article:modified_time" content="2026-02-01T08:23:57.740Z">
 <meta property="article:author" content="天幕">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://img-blog.csdnimg.cn/c0b0e5d4ca3e4866b9f4c6467c40406c.png">
+<meta name="twitter:image" content="http://example.com/images/chatgpt-aliyun/img1.png">
 
 <link rel="canonical" href="http://example.com/2023/04/15/%E5%88%A9%E7%94%A8%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2openai%E7%9A%84Chatgpt%E5%9B%BD%E5%86%85%E7%9B%B4%E6%8E%A5%E7%94%A8/">
 
@@ -206,10 +206,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2023-04-15 11:34:55 / 修改时间：11:41:59" itemprop="dateCreated datePublished" datetime="2023-04-15T11:34:55+08:00">2023-04-15</time>
+              <time title="创建时间：2023-04-15 11:34:55" itemprop="dateCreated datePublished" datetime="2023-04-15T11:34:55+08:00">2023-04-15</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2026-02-01 16:23:57" itemprop="dateModified" datetime="2026-02-01T16:23:57+08:00">2026-02-01</time>
+              </span>
 
           
 
@@ -222,12 +228,12 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p><img src="https://img-blog.csdnimg.cn/c0b0e5d4ca3e4866b9f4c6467c40406c.png" alt="在这里插入图片描述"><br>    国内无法直接访问ChatGPT，一访问就显示 code 1020。而且最近OpenAI查的比较严格，开始大规模对亚洲地区开始封号，对于经常乱跳IP的、同一个ip一堆账号的、之前淘宝机刷账号的，账号被封的可能性极大。<br>    那么有没有符合openai规定，个人独享且&#x3D;&#x3D;免费&#x3D;&#x3D;，可以在国内也稳定使用ChatGPT呢？有！本文教你如何使用阿里云，搭建我们自己的服务器。</p>
-<h1 id="openai账号"><a href="#openai账号" class="headerlink" title="openai账号"></a>openai账号</h1><p>首先你要有一个openai账号，如果没有对应的账号下面的内容就不用看了。<br>首先我们要记录下来账号的api key，首先打开网页<br><a target="_blank" rel="noopener" href="https://platform.openai.com/account/api-keys">openai platform</a>，点击右上角的个人，点击”View API keys”,点击”Create new secret key”，记录下来Secret key，留着后续使用。<strong>注意这个key千万不要给别人</strong><br><img src="https://img-blog.csdnimg.cn/838fc29fd8024c2ba881706e0ac8f0b1.png" alt="在这里插入图片描述"></p>
-<h1 id="阿里云云函数"><a href="#阿里云云函数" class="headerlink" title="阿里云云函数"></a>阿里云云函数</h1><p>前往<a target="_blank" rel="noopener" href="https://www.aliyun.com/product/fc?source=5176.11533457&userCode=s7xej6va">阿里云官网</a>,选择云函数，进入管理控制台。每一个用户均有3个月的免费时长。<br><img src="https://img-blog.csdnimg.cn/1cc6e99e1fc742d998b8d70990d40483.png" alt="在这里插入图片描述"><br>这里首先要选择机房，选择&#x3D;&#x3D;美国硅谷&#x3D;&#x3D;，这个是符合openai运营区域的，然后点击&#x3D;&#x3D;服务及函数&#x3D;&#x3D;，点击创建服务。<br><img src="https://img-blog.csdnimg.cn/c5839e0853c44e0ca165eccb0603948e.png" alt="在这里插入图片描述"><br>此时随便写一个名字，例如chatgpt（这个不重要）。再点击这个名字，进入到里面。选择函数管理，&#x3D;&#x3D;创建函数&#x3D;&#x3D;。<br><img src="https://img-blog.csdnimg.cn/4604422878414d7b8de3df46b75613d1.png" alt="在这里插入图片描述"></p>
-<p><img src="https://img-blog.csdnimg.cn/2ed924c4ad044e379cce457a280bc28b.png" alt="在这里插入图片描述"><br>在这里按如下要求填写，没有提到的就<strong>保持默认</strong>：</p>
-<p>请选择一种创建函数的方式：使用自定义运行时创建<br>函数名称：随意填写<br>请求处理程序类型：处理HTTP请求<br>运行环境：Node.js 16<br>代码上传方式: 通过zip包上传代码， 代码下载地址<a target="_blank" rel="noopener" href="https://github.com/tianmu/openai-proxy/releases/download/1.0/openai-proxy.zip">openai-proxy</a>，然后托上去即可。<br>启动命令：node app.js<br>监听端口： 9000<br>规格方案：选择最小的就够用了。vCPU 规格 0.05 内存规格 128<br>实例并发度：2<br>执行超时时间：900 （一般一句话不会超过900秒）<br><img src="https://img-blog.csdnimg.cn/d4f8b802779645d988c5703d927323f3.png" alt="在这里插入图片描述"><br>现在你的openai成功创建好了！！！<br>点击触发器管理，就可以看到你的url，配置到各种openai工具里就能用咯。<br><img src="https://img-blog.csdnimg.cn/103547a24401432bbd475865f70c6d73.png" alt="在这里插入图片描述"></p>
-<h1 id="gpt客户端"><a href="#gpt客户端" class="headerlink" title="gpt客户端"></a>gpt客户端</h1><p>此时可以使用各种支持自定义网址的客户端，直接在本地畅玩。<br>例如：<br>BetterChatGPT：<a target="_blank" rel="noopener" href="https://github.com/ztjhz/BetterChatGPT/releases/tag/v1.0.2">https://github.com/ztjhz/BetterChatGPT/releases/tag/v1.0.2</a><br><img src="https://img-blog.csdnimg.cn/b3eeae2311f340679bc2a5b9eebfeb1c.png" alt="在这里插入图片描述"><br>注意：<a target="_blank" rel="noopener" href="https://xxx.fcapp.run/v1/chat/completions">https://xxx.fcapp.run/v1/chat/completions</a> 是我们刚才在阿里云函数里的公网地址，不同的软件可能需要配置为<a target="_blank" rel="noopener" href="https://xxx.fcapp.run或https//xxx.fcapp.run/v1/">https://xxx.fcapp.run或https://xxx.fcapp.run/v1/</a></p>
+        <h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p><img src="/images/chatgpt-aliyun/img1.png" alt="ChatGPT访问限制"><br>    国内无法直接访问ChatGPT，一访问就显示 code 1020。而且最近OpenAI查的比较严格，开始大规模对亚洲地区开始封号，对于经常乱跳IP的、同一个ip一堆账号的、之前淘宝机刷账号的，账号被封的可能性极大。<br>    那么有没有符合openai规定，个人独享且&#x3D;&#x3D;免费&#x3D;&#x3D;，可以在国内也稳定使用ChatGPT呢？有！本文教你如何使用阿里云，搭建我们自己的服务器。</p>
+<h1 id="openai账号"><a href="#openai账号" class="headerlink" title="openai账号"></a>openai账号</h1><p>首先你要有一个openai账号，如果没有对应的账号下面的内容就不用看了。<br>首先我们要记录下来账号的api key，首先打开网页<br><a target="_blank" rel="noopener" href="https://platform.openai.com/account/api-keys">openai platform</a>，点击右上角的个人，点击”View API keys”,点击”Create new secret key”，记录下来Secret key，留着后续使用。<strong>注意这个key千万不要给别人</strong><br><img src="/images/chatgpt-aliyun/img2.png" alt="OpenAI API Keys"></p>
+<h1 id="阿里云云函数"><a href="#阿里云云函数" class="headerlink" title="阿里云云函数"></a>阿里云云函数</h1><p>前往<a target="_blank" rel="noopener" href="https://www.aliyun.com/product/fc?source=5176.11533457&userCode=s7xej6va">阿里云官网</a>,选择云函数，进入管理控制台。每一个用户均有3个月的免费时长。<br><img src="/images/chatgpt-aliyun/img3.png" alt="阿里云云函数入口"><br>这里首先要选择机房，选择&#x3D;&#x3D;美国硅谷&#x3D;&#x3D;，这个是符合openai运营区域的，然后点击&#x3D;&#x3D;服务及函数&#x3D;&#x3D;，点击创建服务。<br><img src="/images/chatgpt-aliyun/img4.png" alt="创建服务"><br>此时随便写一个名字，例如chatgpt（这个不重要）。再点击这个名字，进入到里面。选择函数管理，&#x3D;&#x3D;创建函数&#x3D;&#x3D;。<br><img src="/images/chatgpt-aliyun/img5.png" alt="函数管理"></p>
+<p><img src="/images/chatgpt-aliyun/img6.png" alt="创建函数配置"><br>在这里按如下要求填写，没有提到的就<strong>保持默认</strong>：</p>
+<p>请选择一种创建函数的方式：使用自定义运行时创建<br>函数名称：随意填写<br>请求处理程序类型：处理HTTP请求<br>运行环境：Node.js 16<br>代码上传方式: 通过zip包上传代码， 代码下载地址<a target="_blank" rel="noopener" href="https://github.com/tianmu/openai-proxy/releases/download/1.0/openai-proxy.zip">openai-proxy</a>，然后托上去即可。<br>启动命令：node app.js<br>监听端口： 9000<br>规格方案：选择最小的就够用了。vCPU 规格 0.05 内存规格 128<br>实例并发度：2<br>执行超时时间：900 （一般一句话不会超过900秒）<br><img src="/images/chatgpt-aliyun/img7.png" alt="函数配置详情"><br>现在你的openai成功创建好了！！！<br>点击触发器管理，就可以看到你的url，配置到各种openai工具里就能用咯。<br><img src="/images/chatgpt-aliyun/img8.png" alt="触发器URL"></p>
+<h1 id="gpt客户端"><a href="#gpt客户端" class="headerlink" title="gpt客户端"></a>gpt客户端</h1><p>此时可以使用各种支持自定义网址的客户端，直接在本地畅玩。<br>例如：<br>BetterChatGPT：<a target="_blank" rel="noopener" href="https://github.com/ztjhz/BetterChatGPT/releases/tag/v1.0.2">https://github.com/ztjhz/BetterChatGPT/releases/tag/v1.0.2</a><br><img src="/images/chatgpt-aliyun/img9.png" alt="BetterChatGPT配置"><br>注意：<a target="_blank" rel="noopener" href="https://xxx.fcapp.run/v1/chat/completions">https://xxx.fcapp.run/v1/chat/completions</a> 是我们刚才在阿里云函数里的公网地址，不同的软件可能需要配置为<a target="_blank" rel="noopener" href="https://xxx.fcapp.run或https//xxx.fcapp.run/v1/">https://xxx.fcapp.run或https://xxx.fcapp.run/v1/</a></p>
 <h1 id="开发者提醒"><a href="#开发者提醒" class="headerlink" title="开发者提醒"></a>开发者提醒</h1><p>官网文档：<a target="_blank" rel="noopener" href="https://platform.openai.com/docs/api-reference">https://platform.openai.com/docs/api-reference</a><br>使用官网node开发：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> openai = <span class="built_in">require</span>(<span class="string">&quot;openai&quot;</span>);</span><br><span class="line"><span class="keyword">const</span> <span class="title class_">Configuration</span> = openai.<span class="property">Configuration</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="title class_">OpenAIApi</span> = openai.<span class="property">OpenAIApi</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> configuration = <span class="keyword">new</span> <span class="title class_">Configuration</span>(&#123;</span><br><span class="line">    <span class="attr">apiKey</span>: process.<span class="property">env</span>.<span class="property">OPENAI_API_KEY</span>,</span><br><span class="line">    <span class="attr">basePath</span>: <span class="string">&quot;https://xxx.fcapp.run/v1&quot;</span>,</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> openaiApi = <span class="keyword">new</span> <span class="title class_">OpenAIApi</span>(configuration);</span><br><span class="line"><span class="keyword">const</span> response = openaiApi.<span class="title function_">listModels</span>();</span><br></pre></td></tr></table></figure>
 <p>使用官网python开发：</p>
@@ -353,7 +359,7 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2023</span>
+  <span itemprop="copyrightYear">2026</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
